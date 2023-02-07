@@ -9,6 +9,7 @@ interface IBoxPoprs {
 }
 const Box = ({ style }: IBoxPoprs) => {
   return (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       alt=""
       src="_LR-logo_01.png"
