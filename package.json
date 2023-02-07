@@ -1,0 +1,76 @@
+{
+  "name": "starter-next",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && yarn format",
+    "lint:strict": "eslint --max-warnings=0 src",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "format": "prettier -w .",
+    "eslint": "eslint",
+    "format:check": "prettier -c .",
+    "icons": "npx @svgr/cli --title-prop --icon --typescript -d ./src/icons/components ./src/icons/svg && npx prettier --write ./src/icons/components",
+    "cy:run": "cypress run --browser chrome --headless",
+    "cmp": "npx hygen cmp new",
+    "sub": "npx hygen cmp sub",
+    "prepare": "husky install",
+    "exp": "node ./expansion.mjs"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "framer-motion": "^9.0.2",
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-use": "^17.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/node": "18.11.10",
+    "@types/react": "18.0.26",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "autoprefixer": "^10.4.10",
+    "babel-loader": "^9.1.0",
+    "change-case": "^4.1.2",
+    "eslint": "^8.23.1",
+    "eslint-config-next": "^13.0.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-storybook": "^0.6.4",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.2",
+    "inquirer": "^9.1.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.2.0",
+    "storybook-css-modules": "^1.0.8",
+    "tailwindcss": "^3.1.8",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "typescript": "^4.8.3"
+  },
+  "lint-staged": {
+    "{src,pages}/**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
+  }
+}

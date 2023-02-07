@@ -1,0 +1,11 @@
+{
+  "css.validate": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  // disable headwind and use prettier to order tailwind classnames
+  "headwind.runOnSave": false,
+  "tailwindCSS.experimental.classRegex": [["/\\*tw\\*/ ([^}]*)}"]]
+}
